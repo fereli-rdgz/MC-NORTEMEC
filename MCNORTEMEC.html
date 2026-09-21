@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MC NORTEMEC | Ingeniería • Energía • Tecnología</title>
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 100px 7%;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 5, 0.96);
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 7% 80px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(212, 175, 55, 0.15),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050505,
+                    #111111
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+            width: 300px;
+            max-width: 75%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            color: #d4af37;
+            letter-spacing: 4px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #bdbdbd;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        /* ================= BOTONES ================= */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #d4af37;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-secondary {
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: #d4af37;
+            color: #000;
+        }
+
+        /* ================= TITULOS ================= */
+
+        .section-label {
+            color: #d4af37;
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 55px);
+            line-height: 1.1;
+            margin-bottom: 35px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .intro {
+            max-width: 800px;
+            color: #aaa;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        /* ================= NOSOTROS ================= */
+
+        #nosotros {
+            background: #0b0b0b;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            border: 1px solid #292929;
+            padding: 35px;
+            background: #101010;
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+        }
+
+        .number {
+            color: #d4af37;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .feature h3 {
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        .feature p {
+            color: #999;
+        }
+
+        /* ================= SERVICIOS ================= */
+
+        #servicios {
+            background: #050505;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            padding: 35px;
+            min-height: 220px;
+            border: 1px solid #292929;
+            background: linear-gradient(145deg, #111, #090909);
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 35px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #999;
+        }
+
+        /* ================= OBJETIVOS ================= */
+
+        #objetivos {
+            background: #0b0b0b;
+        }
+
+        .objectives {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .objective {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            border-left: 2px solid #d4af37;
+            background: #101010;
+        }
+
+        .objective-number {
+            color: #d4af37;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .objective p {
+            color: #bbb;
+        }
+
+        /* ================= ENFOQUE ================= */
+
+        .focus {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .focus-card {
+            padding: 30px;
+            border: 1px solid #292929;
+            text-align: center;
+            background: #101010;
+        }
+
+        .focus-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .focus-card p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* ================= CONTACTO ================= */
+
+        #contacto {
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(212, 175, 55, 0.12),
+                    transparent 40%
+                ),
+                #050505;
+
+            text-align: center;
+        }
+
+        .contact-text {
+            max-width: 650px;
+            margin: 0 auto 50px;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-card {
+            padding: 30px;
+            border: 1px solid #292929;
+            background: #101010;
+        }
+
+        .contact-card .icon {
+            font-size: 30px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #999;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 35px 7%;
+            border-top: 1px solid #292929;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #777;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .features,
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .focus {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .features,
+            .services,
+            .objectives,
+            .focus {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-logo {
+                width: 230px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            <img src="logo.png" alt="MC NORTEMEC">
+        </div>
+
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= INICIO ================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <!-- LOGO PRINCIPAL -->
+            <img
+                src="logo.png"
+                alt="MC NORTEMEC"
+                class="hero-logo"
+            >
+
+            <div class="subtitle">
+                INGENIERÍA • ENERGÍA • TECNOLOGÍA
+            </div>
+
+            <h1>
+                Potencia para tus proyectos.
+                <span>Ingeniería para el futuro.</span>
+            </h1>
+
+            <p>
+                Soluciones especializadas en servicios eléctricos,
+                mantenimiento, automatización y control para
+                instalaciones industriales.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#servicios" class="btn btn-primary">
+                    Conocer servicios
+                </a>
+
+                <a href="#contacto" class="btn btn-secondary">
+                    Solicitar cotización
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOSOTROS ================= -->
+
+    <section id="nosotros">
+
+        <div class="section-label">
+            MC NORTEMEC
+        </div>
+
+        <h2 class="section-title">
+            Soluciones técnicas con
+            <span>visión de futuro</span>
+        </h2>
+
+        <p class="intro">
+            MC NORTEMEC desarrolla soluciones especializadas para
+            instalaciones eléctricas e industriales, combinando
+            experiencia técnica, seguridad y tecnología.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="number">01</div>
+
+                <h3>
+                    Experiencia técnica
+                </h3>
+
+                <p>
+                    Servicios enfocados en instalaciones eléctricas,
+                    mantenimiento, pruebas, automatización y control.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="number">02</div>
+
+                <h3>
+                    Seguridad y precisión
+                </h3>
+
+                <p>
+                    Enfoque en mejorar sistemas, fortalecer la seguridad
+                    y planificar los equipos de trabajo.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="number">03</div>
+
+                <h3>
+                    Tecnología actual
+                </h3>
+
+                <p>
+                    Una visión orientada a trabajar con tecnología actual
+                    y desarrollar propuestas para el futuro.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICIOS ================= -->
+
+    <section id="servicios">
+
+        <div class="section-label">
+            NUESTROS SERVICIOS
+        </div>
+
+        <h2 class="section-title">
+            Ingeniería eléctrica
+            <span>especializada</span>
+        </h2>
+
+        <p class="intro">
+            Conoce las principales soluciones que ofrece MC NORTEMEC.
+        </p>
+
+        <div class="services">
+
+
+            <div class="service">
+
+                <div class="icon">⚡</div>
+
+                <h3>
+                    Subestaciones
+                </h3>
+
+                <p>
+                    Mantenimiento preventivo a subestaciones.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">◈</div>
+
+                <h3>
+                    Transformadores
+                </h3>
+
+                <p>
+                    Pruebas eléctricas a transformadores.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">〽</div>
+
+                <h3>
+                    Media tensión
+                </h3>
+
+                <p>
+                    Suministro e instalación de elementos
+                    en media tensión.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">⏱</div>
+
+                <h3>
+                    Emergencias 24/7
+                </h3>
+
+                <p>
+                    Atención a emergencias las 24 horas,
+                    los 7 días de la semana.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">⌁</div>
+
+                <h3>
+                    Tierras físicas
+                </h3>
+
+                <p>
+                    Mantenimiento, reparación y pruebas a
+                    sistemas de tierras físicas.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">◉</div>
+
+                <h3>
+                    Termografía infrarroja
+                </h3>
+
+                <p>
+                    Detección de anomalías térmicas para identificar
+                    puntos calientes antes de fallas graves.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">▣</div>
+
+                <h3>
+                    Plantas de emergencia
+                </h3>
+
+                <p>
+                    Pólizas de mantenimiento, dictamen,
+                    mantenimiento y reparación.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">✦</div>
+
+                <h3>
+                    Soldadura y pailería
+                </h3>
+
+                <p>
+                    Servicios de soldadura y pailería.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">⚙</div>
+
+                <h3>
+                    Automatización y control
+                </h3>
+
+                <p>
+                    Programación de robots, diseño de cabinas con
+                    perfil Bosch y mantenimiento y reparación
+                    de tableros de control.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OBJETIVOS ================= -->
+
+    <section id="objetivos">
+
+        <div class="section-label">
+            NUESTROS OBJETIVOS
+        </div>
+
+        <h2 class="section-title">
+            Ingeniería para el
+            <span>futuro tecnológico</span>
+        </h2>
+
+        <div class="objectives">
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    01
+                </div>
+
+                <p>
+                    Aumentar la formación y nivel técnico.
+                </p>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    02
+                </div>
+
+                <p>
+                    Contar con el mejor equipo profesional.
+                </p>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    03
+                </div>
+
+                <p>
+                    Trabajar con tecnología actual.
+                </p>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    04
+                </div>
+
+                <p>
+                    Planificar los proyectos de forma eficiente.
+                </p>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    05
+                </div>
+
+                <p>
+                    Ingeniería para el futuro tecnológico.
+                </p>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-number">
+                    06
+                </div>
+
+                <p>
+                    Tratar con clientes internacionales.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ENFOQUE ================= -->
+
+    <section>
+
+        <div class="section-label">
+            NUESTRO ENFOQUE
+        </div>
+
+        <h2 class="section-title">
+            Trabajo orientado a
+            <span>resultados</span>
+        </h2>
+
+        <div class="focus">
+
+
+            <div class="focus-card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    Mejorar
+                </h3>
+
+                <p>
+                    Mejorar los sistemas y procesos.
+                </p>
+
+            </div>
+
+
+            <div class="focus-card">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h3>
+                    Planificar
+                </h3>
+
+                <p>
+                    Planificar equipos y proyectos de forma eficiente.
+                </p>
+
+            </div>
+
+
+            <div class="focus-card">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h3>
+                    Seguridad
+                </h3>
+
+                <p>
+                    Mejorar la seguridad en las actividades.
+                </p>
+
+            </div>
+
+
+            <div class="focus-card">
+
+                <div class="number">
+                    04
+                </div>
+
+                <h3>
+                    Innovar
+                </h3>
+
+                <p>
+                    Investigar nuevas propuestas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+
+    <section id="contacto">
+
+        <div class="section-label">
+            ¿TIENES UN PROYECTO?
+        </div>
+
+        <h2 class="section-title">
+            Hablemos de tu
+            <span>proyecto.</span>
+        </h2>
+
+        <p class="contact-text">
+            Solicita información o una cotización para conocer
+            cómo podemos ayudarte.
+        </p>
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ✉
+                </div>
+
+                <h3>
+                    Correo
+                </h3>
+
+                <p>
+                    info@mcnortemec.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ☎
+                </div>
+
+                <h3>
+                    Teléfono
+                </h3>
+
+                <p>
+                    +52 899 465 7794
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    ⌖
+                </div>
+
+                <h3>
+                    Ubicación
+                </h3>
+
+                <p>
+                    Reynosa, Tamaulipas, México
+                </p>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="#contacto" class="btn btn-primary">
+            Solicitar cotización
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <strong>
+                MC NORTEMEC
+            </strong>
+
+            <br>
+
+            Ingeniería • Energía • Tecnología
+
+        </div>
+
+
+        <div>
+
+            © MC NORTEMEC.
+            Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
